@@ -6,14 +6,14 @@ class Player
 	ACCELERATION = 0.5
 
 	def initialize
-		@x  = @y = @vel_X = @vel_y = @angle = 0.0
+		@x  = @y = @vel_x = @vel_y = @angle = 0.0
 		@score = 0
 		@image = Gosu::Image.new("media/starfighter.bmp",
-			                            :tilleable => true)	
+			                            :tileable => true)	
 	end
 
 	def warp(x, y)
-		@x. @y = x, y 
+		@x, @y = x, y 
 	end
 
 	def turn_left
@@ -25,23 +25,23 @@ class Player
 	end
 
 	def accelerate
-		@vel_x += Gous::offset_x(@angle, ACCELERATION)
-		@vel_y += Gous::offset_y(@angle, ACCELERATION)
+		@vel_x += Gosu::offset_x(@angle, ACCELERATION)
+		@vel_y += Gosu::offset_y(@angle, ACCELERATION)
 	end
 
 	def move
-		@x += @vel_X
+		@x += @vel_x
 		@y += @vel_y
 
 		@x %= 640
-		@y % = 480
+		@y %= 480
 
 		@vel_x *= 0.95
 		@vel_y *= 0.95
 	end
 
-	def drar
-		@image.draw_rota(@x, @y, 1, @angle)
+	def draw
+		@image.draw_rot(@x, @y, 1, @angle)
 	end
 
 end	
