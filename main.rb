@@ -25,7 +25,7 @@ class GameWindow < Gosu::Window
 
 	def draw
 		@player.draw
-		@background_image.draw(0, 0, 0)
+		@background_image.draw(0, 0, ZOrder::BACKGROUND)
 	end
 
 	def button_down(id)
