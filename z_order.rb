@@ -3,4 +3,6 @@ module ZOrder
 	STARS = 1
 	PLAYER = 2
 	UI = 3
+	CRATES = 1
+	SHOT = 1
 end
